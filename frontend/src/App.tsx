@@ -3,45 +3,27 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
-} from "react-router-dom"
+  useLocation,
+ } from "react-router-dom"
 import './App.css'
 import About from './screens/About';
 import Home from './screens/Home';
-import Users from './screens/Users';
-
+import Hooks from './screens/Hooks';
+import Navigation from './components/Navigation'
 function App() {
+  const location = useLocation()
   return (
-    <Router>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/users">Users</Link>
-          </li>
-        </ul>
-      </nav>
-
-     
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/users">
-          <Users />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </div>
-  </Router>
+    <>
+        <Navigation/>
+    
+        <Switch location={location} key={location.key}>
+          <Route exact path='/about' component={About} />
+          <Route exact path='/hooks' component={Hooks} />
+          <Route path='/' component={Home} />
+        </Switch> 
+         
+    </>
+  
   );
 }
 
