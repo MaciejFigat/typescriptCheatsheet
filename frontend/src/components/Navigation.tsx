@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
+import { NavHashLink } from 'react-router-hash-link'
 import {
   // Navbar,
   // Nav,
@@ -38,13 +39,37 @@ const Navigation: React.FC<NavProps> = () => {
               drop={'down'}
               id={'dropdown-button-drop-left'}
             >
-              <LinkContainer to={'/hooks'}>
-                <NavDropdown.Item>One</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to='/hooks/#partTwo'>
-                <NavDropdown.Item>Two</NavDropdown.Item>
-              </LinkContainer>
-              <NavDropdown.Item to='/hooks/#partThree'>Three</NavDropdown.Item>
+              <NavDropdown.Item>
+                {' '}
+                <NavHashLink
+                  smooth
+                  to='/hooks/#partOne'
+                  activeClassName='selected'
+                >
+                  part 1
+                </NavHashLink>
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+                {' '}
+                <NavHashLink
+                  smooth
+                  to='/hooks/#partTwo'
+                  activeClassName='selected'
+                >
+                  part 3
+                </NavHashLink>
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+                <NavHashLink
+                  smooth
+                  to='/hooks/#partThree'
+                  activeClassName='selected'
+                >
+                  part 3
+                </NavHashLink>
+              </NavDropdown.Item>
             </NavDropdown>
             <li className='nav-item'>
               <a href='#propsId' className='nav-link'>

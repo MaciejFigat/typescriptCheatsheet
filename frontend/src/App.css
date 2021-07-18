@@ -5,6 +5,11 @@ body::before {
   height: 60px;
 }
 
+a {
+  /* color: blue; */
+  text-decoration: none; 
+}
+
 @media(min-width: 768px) {
   .inputSectionOne {
 width: 55%;
