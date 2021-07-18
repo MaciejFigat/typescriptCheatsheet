@@ -1,15 +1,22 @@
 import React from 'react'
 import SectionCode from '../components/SectionCode'
 import {
+  codeExamplePropsBasic,
   codeExamplePropsOne,
   codeExamplePropsTwo,
   codeExamplePropsThree,
-} from '../codeSnippets/codeTwo'
+} from '../codeSnippets/propsExamples'
 interface PropsProps {}
 
 const Props: React.FC<PropsProps> = () => {
   return (
     <>
+      <SectionCode
+        sectionID='basic'
+        title='Basic Prop Types Examples'
+        description='A list of TypeScript types you will likely use in a React+TypeScript app:'
+        codeExample={codeExamplePropsBasic}
+      />
       <SectionCode
         sectionID='partOne'
         title='Title  1'
@@ -19,7 +26,7 @@ const Props: React.FC<PropsProps> = () => {
       <SectionCode
         sectionID='partTwo'
         title='Title  2'
-        description='desc 2'
+        description='I connected the interfaces and used the main one'
         codeExample={codeExamplePropsTwo}
       />
       <SectionCode

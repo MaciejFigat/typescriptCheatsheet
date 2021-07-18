@@ -21,7 +21,7 @@ const SectionCode: React.FC<SectionCodeProps> = ({
           <CodeHighlight codeBlock={codeExample} />
         </div>
         <div className='col-md p-5'>
-          <h2>{title}</h2>
+          {title !== '' && <h2>{title}</h2>}
           <p className='lead'>{description}</p>
         </div>
       </div>

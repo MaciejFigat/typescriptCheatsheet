@@ -84,6 +84,16 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
+                  to='/props/#basic'
+                  activeClassName='selected'
+                >
+                  Basic props
+                </NavHashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                {' '}
+                <NavHashLink
+                  smooth
                   to='/props/#partOne'
                   activeClassName='selected'
                 >
@@ -125,14 +135,14 @@ const Navigation: React.FC<NavProps> = () => {
             </li>
 
             <NavDropdown
-              title='dropdownTitle'
+              title='Miscellaneous'
               drop={'down'}
               id={'dropdown-button-drop-left'}
             >
-              <LinkContainer to={'/'}>
-                <NavDropdown.Item>Stats</NavDropdown.Item>
+              <LinkContainer to={'/misc/#partOne'}>
+                <NavDropdown.Item>Literals</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to='/hooks'>
+              <LinkContainer to='/misc/#partTwo'>
                 <NavDropdown.Item>Settings</NavDropdown.Item>
               </LinkContainer>
               <NavDropdown.Item>Logout</NavDropdown.Item>
