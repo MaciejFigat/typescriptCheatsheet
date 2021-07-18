@@ -34,6 +34,7 @@ const Navigation: React.FC<NavProps> = () => {
         </button>
         <div className='collapse navbar-collapse' id='navmenu'>
           <ul className='navbar-nav ms-auto'>
+            {/* Dropdown for hooks section */}
             <NavDropdown
               title='Hooks'
               drop={'down'}
@@ -71,6 +72,47 @@ const Navigation: React.FC<NavProps> = () => {
                 </NavHashLink>
               </NavDropdown.Item>
             </NavDropdown>
+            {/* end of the dropdown for Hooks */}
+
+            {/* dropdown for Props section */}
+            <NavDropdown
+              title='Props'
+              drop={'down'}
+              id={'dropdown-button-drop-left'}
+            >
+              <NavDropdown.Item>
+                {' '}
+                <NavHashLink
+                  smooth
+                  to='/props/#partOne'
+                  activeClassName='selected'
+                >
+                  part 1
+                </NavHashLink>
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+                {' '}
+                <NavHashLink
+                  smooth
+                  to='/props/#partTwo'
+                  activeClassName='selected'
+                >
+                  part 3
+                </NavHashLink>
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+                <NavHashLink
+                  smooth
+                  to='/props/#partThree'
+                  activeClassName='selected'
+                >
+                  part 3
+                </NavHashLink>
+              </NavDropdown.Item>
+            </NavDropdown>
+            {/* end of Props section dropdown */}
             <li className='nav-item'>
               <a href='#propsId' className='nav-link'>
                 Props
@@ -81,21 +123,7 @@ const Navigation: React.FC<NavProps> = () => {
                 First Link
               </a>
             </li>
-            <li className='nav-item'>
-              <a href='#sectionTwo' className='nav-link'>
-                Second Link
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a href='#sectionThree' className='nav-link'>
-                Third Link
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a href='#sectionAccord' className='nav-link'>
-                The last one
-              </a>
-            </li>
+
             <NavDropdown
               title='dropdownTitle'
               drop={'down'}

@@ -7,7 +7,7 @@ import {
 } from '../codeSnippets/codeTwo'
 interface HooksProps {}
 
-const Hooks: React.FC<HooksProps> = ({}) => {
+const Hooks: React.FC<HooksProps> = () => {
   return (
     <>
       <SectionCode
