@@ -17,12 +17,22 @@ const SectionCode: React.FC<SectionCodeProps> = ({
   return (
     <section id={sectionID} className='p-5 bg-dark text-light'>
       <div className='row align-items-center justify-content-between'>
-        <div className='col-md'>
+        <div
+          className='col-md'
+          style={{ maxWidth: '45rem', minWidth: 'fit-content' }}
+        >
           <CodeHighlight codeBlock={codeExample} />
         </div>
         <div className='col-md p-5'>
-          {title !== '' && <h2>{title}</h2>}
-          <p className='lead'>{description}</p>
+          <div
+            className='card border-success mb-3'
+            style={{ maxWidth: '20rem' }}
+          >
+            {title !== '' && <div className='card-header'>{title}</div>}
+            <div className='card-body'>
+              <p className='card-text'>{description}</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -9,20 +9,20 @@ const user = {
 }
 
 `
-const typesExampleTwo: string  = `
+const typesExampleTwo: string = `
 interface User {
   name: string;
   id: number;
 }
 
 `
-const typesExampleThree: string  = `
+const typesExampleThree: string = `
 const user: User = {
   name: "Hayes",
   id: 0,
 }
 `
-const propTypeExamples: string  = `
+const propTypeExamples: string = `
 type AppProps = {
   message: string;
   count: number;
@@ -61,19 +61,19 @@ type AppProps = {
   optional?: OptionalType;
 }
 `
-const useStateExample: string  = `const [user, setUser] = React.useState<IUser | null>(null);
+const useStateExample: string = `const [user, setUser] = React.useState<IUser | null>(null);
 
 // later...
 setUser(newUser);`
-const useStateExampleTwo = `// You can also use type assertions if a state is initialized soon after setup and always has a value after:
+const useStateExampleTwo: string = `// You can also use type assertions if a state is initialized soon after setup and always has a value after:
 const [user, setUser] = React.useState<IUser>({} as IUser);
 
 // later...
 setUser(newUser);`
-const useStateExampleThree: string  = `empty
+const useStateExampleThree: string = `empty
 `
 
-const functionComponentsExamples: string  = ` 
+const functionComponentsExamples: string = ` 
 /*  Declaring type of props - see "Typing Component Props" for more examples */
 type AppProps = {
   message: string;
@@ -89,7 +89,7 @@ const App = ({ message }: AppProps): JSX.Element => <div>{message}</div>;
 /*  you can also inline the type declaration; eliminates naming the prop types, but looks repetitive */
 const App = ({ message }: { message: string }) => <div>{message}</div>;`
 
-const useReducerExample: string  = `const initialState = { count: 0 };
+const useReducerExample: string = `const initialState = { count: 0 };
 
 type ACTIONTYPE =
   | { type: "increment"; payload: number }
@@ -121,7 +121,7 @@ function Counter() {
   );
 }`
 
-const useEffectExampleOne: string  = `function DelayedEffect(props: { timerMs: number }) {
+const useEffectExampleOne: string = `function DelayedEffect(props: { timerMs: number }) {
   const { timerMs } = props;
 
   useEffect(
@@ -136,7 +136,7 @@ const useEffectExampleOne: string  = `function DelayedEffect(props: { timerMs: n
   return null;
 }
 `
-const useEffectExampleTwo: string  = `function DelayedEffect(props: { timerMs: number }) {
+const useEffectExampleTwo: string = `function DelayedEffect(props: { timerMs: number }) {
   const { timerMs } = props;
 
   useEffect(() => {
@@ -148,7 +148,7 @@ const useEffectExampleTwo: string  = `function DelayedEffect(props: { timerMs: n
   return null;
 }
 `
-const useRefExampleOne: string  = `function Foo() {
+const useRefExampleOne: string = `function Foo() {
   // - If possible, prefer as specific as possible. For example, HTMLDivElement
   //   is better than HTMLElement and way better than Element.
   // - Technical-wise, this returns RefObject<HTMLDivElement>
@@ -166,7 +166,7 @@ const useRefExampleOne: string  = `function Foo() {
   // Give the ref to an element so React can manage it for you
   return <div ref={divRef}>etc</div>;
 }`
-const useRefExampleTwo: string  = `function Foo() {
+const useRefExampleTwo: string = `function Foo() {
   // Technical-wise, this returns MutableRefObject<number | null>
   const intervalRef = useRef<number | null>(null);
 

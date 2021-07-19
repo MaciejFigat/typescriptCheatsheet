@@ -11,9 +11,13 @@ import { LinkContainer } from 'react-router-bootstrap'
 interface NavProps {}
 
 const Navigation: React.FC<NavProps> = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState('')
   const menuHandler = () => {
-    setMenuOpen(!menuOpen)
+    if (menuOpen === '') {
+      setMenuOpen('show')
+    } else {
+      setMenuOpen('')
+    }
   }
 
   return (
@@ -23,16 +27,10 @@ const Navigation: React.FC<NavProps> = () => {
         <LinkContainer to={'/home'}>
           <div className='navbar-brand'>React.tsx</div>
         </LinkContainer>
-        <button
-          className='navbar-toggler'
-          type='button'
-          data-bs-toggle='collapse'
-          data-bs-target='#navmenu'
-          onClick={menuHandler}
-        >
+        <button className='navbar-toggler' type='button' onClick={menuHandler}>
           <span className='navbar-toggler-icon'></span>
         </button>
-        <div className='collapse navbar-collapse' id='navmenu'>
+        <div className={`collapse navbar-collapse ${menuOpen}`} id='navmenu'>
           <ul className='navbar-nav ms-auto'>
             {/* Dropdown for hooks section */}
             <NavDropdown
@@ -123,17 +121,8 @@ const Navigation: React.FC<NavProps> = () => {
               </NavDropdown.Item>
             </NavDropdown>
             {/* end of Props section dropdown */}
-            <li className='nav-item'>
-              <a href='#propsId' className='nav-link'>
-                Props
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a href='#showcase' className='nav-link'>
-                First Link
-              </a>
-            </li>
 
+            {/* Dropdown for misc section */}
             <NavDropdown
               title='Miscellaneous'
               drop={'down'}
@@ -142,7 +131,7 @@ const Navigation: React.FC<NavProps> = () => {
               <LinkContainer to={'/misc/#partOne'}>
                 <NavDropdown.Item>Literals</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to='/misc/#partTwo'>
+              <LinkContainer to='/misc/#partSix'>
                 <NavDropdown.Item>Settings</NavDropdown.Item>
               </LinkContainer>
               <NavDropdown.Item>Logout</NavDropdown.Item>
