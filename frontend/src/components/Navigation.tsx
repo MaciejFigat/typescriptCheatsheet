@@ -38,32 +38,33 @@ const Navigation: React.FC<NavProps> = () => {
               drop={'down'}
               id={'dropdown-button-drop-left'}
             >
-              <NavDropdown.Item>
+              {/*NavDropdown.Item as='button' I use it to avoid nesting a<a - which React warns me about and caused me suprising amount of grief*/}
+              <NavDropdown.Item as='button'>
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/hooks/#partOne'
+                  to='/hooks#partOne'
                   activeClassName='selected'
                 >
                   part 1
                 </NavHashLink>
               </NavDropdown.Item>
 
-              <NavDropdown.Item>
+              <NavDropdown.Item as='button'>
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/hooks/#partTwo'
+                  to='/hooks#partTwo'
                   activeClassName='selected'
                 >
-                  part 3
+                  part 2
                 </NavHashLink>
               </NavDropdown.Item>
 
-              <NavDropdown.Item>
+              <NavDropdown.Item as='button'>
                 <NavHashLink
                   smooth
-                  to='/hooks/#partThree'
+                  to='/hooks#partThree'
                   activeClassName='selected'
                 >
                   part 3
@@ -78,7 +79,7 @@ const Navigation: React.FC<NavProps> = () => {
               drop={'down'}
               id={'dropdown-button-drop-left'}
             >
-              <NavDropdown.Item>
+              <NavDropdown.Item as='button'>
                 {' '}
                 <NavHashLink
                   smooth
@@ -88,7 +89,7 @@ const Navigation: React.FC<NavProps> = () => {
                   Basic props
                 </NavHashLink>
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as='button'>
                 {' '}
                 <NavHashLink
                   smooth
@@ -99,7 +100,7 @@ const Navigation: React.FC<NavProps> = () => {
                 </NavHashLink>
               </NavDropdown.Item>
 
-              <NavDropdown.Item>
+              <NavDropdown.Item as='button'>
                 {' '}
                 <NavHashLink
                   smooth
@@ -110,7 +111,7 @@ const Navigation: React.FC<NavProps> = () => {
                 </NavHashLink>
               </NavDropdown.Item>
 
-              <NavDropdown.Item>
+              <NavDropdown.Item as='button'>
                 <NavHashLink
                   smooth
                   to='/props/#partThree'
@@ -128,13 +129,33 @@ const Navigation: React.FC<NavProps> = () => {
               drop={'down'}
               id={'dropdown-button-drop-left'}
             >
-              <LinkContainer to={'/misc/#partOne'}>
-                <NavDropdown.Item>Literals</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to='/misc/#partSix'>
-                <NavDropdown.Item>Settings</NavDropdown.Item>
-              </LinkContainer>
-              <NavDropdown.Item>Logout</NavDropdown.Item>
+              <NavDropdown.Item as='button'>
+                <NavHashLink
+                  smooth
+                  to={'/misc#partOne'}
+                  activeClassName='selected'
+                >
+                  Literals part 1
+                </NavHashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item as='button'>
+                <NavHashLink
+                  smooth
+                  to={'/misc#partThree'}
+                  activeClassName='selected'
+                >
+                  Literals part 2
+                </NavHashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item as='button'>
+                <NavHashLink
+                  smooth
+                  to={'/misc#partFour'}
+                  activeClassName='selected'
+                >
+                  Literals part 2
+                </NavHashLink>
+              </NavDropdown.Item>
             </NavDropdown>
           </ul>
         </div>
