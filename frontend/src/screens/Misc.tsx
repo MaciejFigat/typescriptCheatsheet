@@ -25,6 +25,7 @@ const Misc: React.FC<MiscProps> = () => {
       <SectionCode
         sectionID='partOne'
         title='Literals'
+        version='danger'
         description={literalsDescOne}
         codeExample={literalsExampleOne}
       />

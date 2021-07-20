@@ -7,6 +7,7 @@ import Hooks from './screens/Hooks'
 import Navigation from './components/Navigation'
 import Props from './screens/Props'
 import Misc from './screens/Misc'
+import Footer from './components/Footer'
 function App() {
   const location = useLocation()
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/misc' component={Misc} />
         <Route path='/' component={Home} />
       </Switch>
+      <Footer description={'Godspeed'} />
     </>
   )
 }

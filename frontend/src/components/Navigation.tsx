@@ -11,7 +11,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 interface NavProps {}
 
 const Navigation: React.FC<NavProps> = () => {
-  const [menuOpen, setMenuOpen] = useState('')
+  const [menuOpen, setMenuOpen] = useState<string>('')
   const menuHandler = () => {
     if (menuOpen === '') {
       setMenuOpen('show')
@@ -153,7 +153,7 @@ const Navigation: React.FC<NavProps> = () => {
                   to={'/misc#partFour'}
                   activeClassName='selected'
                 >
-                  Literals part 2
+                  Literals part 3
                 </NavHashLink>
               </NavDropdown.Item>
             </NavDropdown>
