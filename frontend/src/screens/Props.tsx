@@ -1,10 +1,32 @@
 import React from 'react'
 import SectionCode from '../components/SectionCode'
 import {
-  codeExamplePropsBasic,
+  codeExamplePropsBasicOne,
+  codeExamplePropsBasicTwo,
+  codeExamplePropsBasicThree,
+  codeExamplePropsBasicFour,
+  codeExamplePropsBasicFive,
+  codeExamplePropsBasicSix,
+  codeExamplePropsBasicSeven,
+  codeExamplePropsBasicEight,
+  codeExamplePropsBasicNine,
+  codeExamplePropsBasicOneDesc,
+  codeExamplePropsBasicTwoDesc,
+  codeExamplePropsBasicThreeDesc,
+  codeExamplePropsBasicFourDesc,
+  codeExamplePropsBasicFiveDesc,
+  codeExamplePropsBasicSixDesc,
+  codeExamplePropsBasicSevenDesc,
+  codeExamplePropsBasicEightDesc,
+  codeExamplePropsBasicNineDesc,
   codeExamplePropsOne,
   codeExamplePropsTwo,
   codeExamplePropsThree,
+  codeExamplePropsFour,
+  codeExamplePropsOneDesc,
+  codeExamplePropsTwoDesc,
+  codeExamplePropsThreeDesc,
+  codeExamplePropsFourDesc,
 } from '../codeSnippets/propsExamples'
 interface PropsProps {}
 
@@ -12,28 +34,91 @@ const Props: React.FC<PropsProps> = () => {
   return (
     <>
       <SectionCode
-        sectionID='basic'
+        sectionID='basicOne'
         title='Basic Prop Types Examples'
-        description='A list of TypeScript types you will likely use in a React+TypeScript app:'
-        codeExample={codeExamplePropsBasic}
+        version='secondary'
+        description={codeExamplePropsBasicOneDesc}
+        codeExample={codeExamplePropsBasicOne}
+      />
+      <SectionCode
+        sectionID='basicTwo'
+        title=''
+        version='primary'
+        description={codeExamplePropsBasicTwoDesc}
+        codeExample={codeExamplePropsBasicTwo}
+      />
+      <SectionCode
+        sectionID='basicThree'
+        title=''
+        version='secondary'
+        description={codeExamplePropsBasicThreeDesc}
+        codeExample={codeExamplePropsBasicThree}
+      />
+      <SectionCode
+        sectionID='basicFour'
+        title='Objects'
+        description={codeExamplePropsBasicFourDesc}
+        codeExample={codeExamplePropsBasicFour}
+      />
+      <SectionCode
+        sectionID='basicFive'
+        title=''
+        version='primary'
+        description={codeExamplePropsBasicFiveDesc}
+        codeExample={codeExamplePropsBasicFive}
+      />
+      <SectionCode
+        sectionID='basicSix'
+        title='Functions'
+        description={codeExamplePropsBasicSixDesc}
+        codeExample={codeExamplePropsBasicSix}
+      />
+      <SectionCode
+        sectionID='basicSeven'
+        title=''
+        description={codeExamplePropsBasicSevenDesc}
+        codeExample={codeExamplePropsBasicSeven}
+      />
+      <SectionCode
+        sectionID='basicEight'
+        title=''
+        description={codeExamplePropsBasicEightDesc}
+        codeExample={codeExamplePropsBasicEight}
+      />
+      <SectionCode
+        sectionID='basicNine'
+        title=''
+        version='danger'
+        description={codeExamplePropsBasicNineDesc}
+        codeExample={codeExamplePropsBasicNine}
       />
       <SectionCode
         sectionID='partOne'
-        title='Title  1'
-        description='desc 1'
+        title=''
+        version='success'
+        description={codeExamplePropsOneDesc}
         codeExample={codeExamplePropsOne}
       />
       <SectionCode
         sectionID='partTwo'
-        title='Title  2'
-        description='I connected the interfaces and used the main one'
+        title=''
+        version='warning'
+        description={codeExamplePropsTwoDesc}
         codeExample={codeExamplePropsTwo}
       />
       <SectionCode
         sectionID='partThree'
-        title='Title  3'
-        description='desc 3'
+        title=''
+        version='primary'
+        description={codeExamplePropsThreeDesc}
         codeExample={codeExamplePropsThree}
+      />
+      <SectionCode
+        sectionID='partFour'
+        title=''
+        version='secondary'
+        description={codeExamplePropsFourDesc}
+        codeExample={codeExamplePropsFour}
       />
     </>
   )

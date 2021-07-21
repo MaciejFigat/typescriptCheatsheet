@@ -46,7 +46,7 @@ const Navigation: React.FC<NavProps> = () => {
                   to='/hooks#partOne'
                   activeClassName='selected'
                 >
-                  part 1
+                  useState
                 </NavHashLink>
               </NavDropdown.Item>
 
@@ -54,20 +54,20 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/hooks#partTwo'
+                  to='/hooks#partFour'
                   activeClassName='selected'
                 >
-                  part 2
+                  useRef & useReducer
                 </NavHashLink>
               </NavDropdown.Item>
 
               <NavDropdown.Item as='button'>
                 <NavHashLink
                   smooth
-                  to='/hooks#partThree'
+                  to='/hooks#partEight'
                   activeClassName='selected'
                 >
-                  part 3
+                  hooks and children
                 </NavHashLink>
               </NavDropdown.Item>
             </NavDropdown>

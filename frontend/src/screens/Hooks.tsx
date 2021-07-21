@@ -46,14 +46,14 @@ const Hooks: React.FC<HooksProps> = () => {
       />
       <SectionCode
         sectionID='partFour'
-        title=''
+        title='useRef'
         version='dark'
         description={codeDescriptionHooksFour}
         codeExample={codeExampleHooksFour}
       />
       <SectionCode
         sectionID='partFive'
-        title=''
+        title='useReducer'
         version='success'
         description={codeDescriptionHooksFive}
         codeExample={codeExampleHooksFive}
@@ -74,7 +74,7 @@ const Hooks: React.FC<HooksProps> = () => {
       />
       <SectionCode
         sectionID='partEight'
-        title=''
+        title='useState passed to children'
         version='info'
         description={codeDescriptionHooksEight}
         codeExample={codeExampleHooksEight}
