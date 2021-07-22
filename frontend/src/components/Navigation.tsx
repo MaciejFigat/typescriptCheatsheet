@@ -83,10 +83,30 @@ const Navigation: React.FC<NavProps> = () => {
                 {' '}
                 <NavHashLink
                   smooth
-                  to='/props/#basic'
+                  to='/props/#basicOne'
                   activeClassName='selected'
                 >
                   Basic props
+                </NavHashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item as='button'>
+                {' '}
+                <NavHashLink
+                  smooth
+                  to='/props/#basicFour'
+                  activeClassName='selected'
+                >
+                  Functions
+                </NavHashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item as='button'>
+                {' '}
+                <NavHashLink
+                  smooth
+                  to='/props/#basicSeven'
+                  activeClassName='selected'
+                >
+                  Props
                 </NavHashLink>
               </NavDropdown.Item>
               <NavDropdown.Item as='button'>
