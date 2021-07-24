@@ -1,12 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface AccordionProps {
   link: string
   titleOne: string
   descOne: string
 }
+interface AccordionStateProps {
+  status: 'open' | 'collapsed'
+  statusText: 'show' | 'collapse'
+}
 
 const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
+  const [accordionOne, setAccordionOne] = useState<AccordionStateProps>({
+    status: 'open',
+    statusText: 'show',
+  })
+
+  const accOneHandler = () => {
+    if (accordionOne.status === 'collapsed') {
+      setAccordionOne({ status: 'open', statusText: 'show' })
+      console.log(accordionOne.statusText)
+    } else if (accordionOne.status === 'open') {
+      setAccordionOne({ status: 'collapsed', statusText: 'collapse' })
+      console.log(accordionOne.statusText)
+    } else {
+      console.log(accordionOne.statusText)
+    }
+  }
+  // const accOneHandler = () => {
+  //   if (statusOne === 'collapsed') {
+  //     setStatusOne('open')
+  //     console.log(statusOne)
+  //   } else {
+  //     setStatusOne('collapsed')
+  //     console.log(statusOne)
+  //   }
+  // }
+
   return (
     <section id='sectionAccord' className='p-5'>
       <div className='container'>
@@ -15,10 +45,9 @@ const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
           <div className='accordion-item'>
             <h2 className='accordion-header' id='flush-headingOne'>
               <button
-                className='accordion-button collapsed'
+                className={`accordion-button ${accordionOne.status}`}
                 type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#firstQuestion'
+                onClick={accOneHandler}
                 aria-expanded='false'
                 aria-controls='flush-collapseOne'
               >
@@ -26,10 +55,9 @@ const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
               </button>
             </h2>
             <div
-              id='firstQuestion'
-              className='accordion-collapse collapse'
+              // className='accordion-collapse collapse'
+              className={`accordion-collapse collapse ${accordionOne.statusText}`}
               aria-labelledby='flush-headingOne'
-              data-bs-parent='#accordionOne'
             >
               <div className='accordion-body'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
@@ -45,8 +73,6 @@ const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
               <button
                 className='accordion-button collapsed'
                 type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#secondQuestion'
                 aria-expanded='false'
                 aria-controls='flush-collapseOne'
               >
@@ -54,10 +80,8 @@ const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
               </button>
             </h2>
             <div
-              id='secondQuestion'
               className='accordion-collapse collapse'
               aria-labelledby='flush-headingOne'
-              data-bs-parent='#accordionOne'
             >
               <div className='accordion-body'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
@@ -73,8 +97,6 @@ const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
               <button
                 className='accordion-button collapsed'
                 type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#thirdQuestion'
                 aria-expanded='false'
                 aria-controls='flush-collapseTwo'
               >
@@ -82,7 +104,6 @@ const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
               </button>
             </h2>
             <div
-              id='thirdQuestion'
               className='accordion-collapse collapse'
               aria-labelledby='flush-headingTwo'
               data-bs-parent='#accordionOne'
@@ -102,7 +123,6 @@ const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
                 className='accordion-button collapsed'
                 type='button'
                 data-bs-toggle='collapse'
-                data-bs-target='#fourthQuestion'
                 aria-expanded='false'
                 aria-controls='flush-collapseThree'
               >
@@ -110,7 +130,6 @@ const Accordion: React.FC<AccordionProps> = ({ link, titleOne, descOne }) => {
               </button>
             </h2>
             <div
-              id='fourthQuestion'
               className='accordion-collapse collapse'
               aria-labelledby='flush-headingThree'
               data-bs-parent='#accordionOne'
