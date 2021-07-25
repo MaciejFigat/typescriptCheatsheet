@@ -1,5 +1,5 @@
 import React from 'react'
-import Accordion from '../components/Accordion'
+import AccordionComponent from '../components/AccordionComponent'
 const Home: React.FC = () => {
   return (
     <>
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
                 npx create-react-app projectXXX --template typescript
               </p>
             </div>
-            <Accordion
+            <AccordionComponent
               titleOne='Title 1'
               descOne='desc1'
               link='link to a new world.com'
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
                 npx create-react-app projectXXX --template typescript
               </p>
             </div>
-            <Accordion
+            <AccordionComponent
               titleOne='Title 1'
               descOne='desc1'
               link='link to a new world.com'
