@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Accordion from 'react-bootstrap/Accordion'
 interface AccordionComponentCopyProps {}
 interface AccordionStateProps {
   status: 'open' | 'collapsed'
@@ -136,6 +136,43 @@ const AccordionComponentCopy: React.FC<AccordionComponentCopyProps> = ({}) => {
           </div>
         </div>
       </div>
+      {/*  @ts-ignore */}
+      <Accordion defaultActiveKey='0'>
+        {/* @ts-ignore: */}
+        <Accordion.Item eventKey='0'>
+          {/*  @ts-ignore */}
+          <Accordion.Header>Accordion Item #1</Accordion.Header>
+          {/*  @ts-ignore */}
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+            {/*  @ts-ignore */}
+          </Accordion.Body>
+          {/*  @ts-ignore */}
+        </Accordion.Item>
+        {/*  @ts-ignore */}
+        <Accordion.Item eventKey='1'>
+          {/*  @ts-ignore */}
+          <Accordion.Header>Accordion Item #2</Accordion.Header>
+          {/*  @ts-ignore */}
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+            {/*  @ts-ignore */}
+          </Accordion.Body>
+          {/*  @ts-ignore */}
+        </Accordion.Item>
+      </Accordion>
     </>
   )
 }
