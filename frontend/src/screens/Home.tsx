@@ -1,12 +1,13 @@
 import React from 'react'
-// import AccordionComponent from '../components/AccordionComponent'
+import AccordionComponent from '../components/AccordionComponent'
 import { LinkContainer } from 'react-router-bootstrap'
+
 const Home: React.FC = () => {
   return (
     <>
       <section
         id='showcase'
-        className='bg-dark text-light p-2 p-lg-0 pt-lg-5 h-100 text-center text-sm-start'
+        className='bg-dark text-light p-5 p-lg-0 pt-lg-5 h-100 text-center text-sm-start'
       >
         <div className='container'>
           <div className='d-sm-flex align-items-center justify-content-between'>
@@ -35,7 +36,7 @@ const Home: React.FC = () => {
         className='bg-dark text-light p-3 p-lg-0 pt-lg-5 text-center text-sm-start'
       >
         <div className='container'>
-          <div className='d-sm-flex align-items-center justify-content-between position-static'>
+          <div className='d-sm-flex align-items-center justify-content-between'>
             <div>
               <h2>
                 <LinkContainer to={'/hooks'}>
@@ -74,15 +75,32 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+      <section
+        id='showcase'
+        className='bg-dark text-light p-2 p-lg-0 pt-lg-5 h-100 text-center text-sm-start'
+      >
+        <div className='container'>
+          <div className='d-sm-flex align-items-center justify-content-between'>
+            <div>
+              <AccordionComponent
+                titleMain='Main title'
+                titleOne='Links to resources'
+                descOne='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                linkOne='link to a new world.com'
+              />
+            </div>
+            <div>
+              {' '}
+              <AccordionComponent
+                titleOne='Links to resources'
+                descOne='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                linkOne='link to a new world.com'
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
 export default Home
-
-{
-  /* <AccordionComponent
-  titleOne='Links to resources'
-  descOne='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  link='link to a new world.com'
-/> */
-}
