@@ -4,10 +4,10 @@ import { LinkContainer } from 'react-router-bootstrap'
 import CardComponent from '../components/CardComponent'
 const Home: React.FC = () => {
   return (
-    <>
+    <div className='min-vh-100'>
       <section
         id='showcase'
-        className='bg-dark text-light p-5 p-lg-0 pt-lg-5 h-100 text-center text-sm-start'
+        className='bg-dark text-light p-5 p-lg-0 pt-lg-5 h-100 text-center text-sm-start my-3 my-5'
       >
         <div className='container'>
           <div className='d-sm-flex align-items-center justify-content-between'>
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
       </section>
       <section
         id='showcase'
-        className='bg-dark text-light p-3 p-lg-0 pt-lg-5 text-center text-sm-start my-3'
+        className='bg-dark text-light p-3 p-lg-0 pt-lg-5 text-center text-sm-start'
       >
         <div className='container'>
           <div className='d-sm-flex align-items-center justify-content-between'>
@@ -63,6 +63,15 @@ const Home: React.FC = () => {
               linkDescription='Visit git repo'
               variantButton='primary'
             />
+          </div>
+        </div>
+      </section>
+      <section
+        id='showcase'
+        className='bg-dark text-light p-3 p-lg-0 pt-lg-5 text-center text-sm-start'
+      >
+        <div className='container'>
+          <div className='d-sm-flex align-items-center justify-content-between'>
             <CardComponent
               variantCard='dark'
               title='Playground'
@@ -79,14 +88,19 @@ const Home: React.FC = () => {
               linkDescription='>>TS docs'
               variantButton='danger'
             />
+            <div>
+              <h2>
+                <LinkContainer to={'/props'}>
+                  <span className='text-info'>Click on the menu</span>
+                </LinkContainer>{' '}
+                to find snippets of
+                <span className='text-warning'> code</span>{' '}
+              </h2>
+            </div>
           </div>
         </div>
       </section>
-      <section
-        id='showcase'
-        className='bg-dark text-light p-2 p-lg-0 pt-lg-5 h-100 text-center text-sm-start'
-      ></section>
-    </>
+    </div>
   )
 }
 export default Home

@@ -22,7 +22,7 @@ const CardComponent: React.FC<CardComponentProps> = ({
   return (
     <Card
       bg={variantCard}
-      style={{ width: '18rem', height: '12rem' }}
+      style={{ width: '18rem', height: '12rem', minWidth: '200px' }}
       text={variantCard === 'light' ? 'dark' : 'white'}
       className='mx-2'
     >
