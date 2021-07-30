@@ -1,6 +1,6 @@
 import React from 'react'
 import Accordion from 'react-bootstrap/Accordion'
-import { AnimateSharedLayout } from 'framer-motion'
+import { AnimateSharedLayout, motion } from 'framer-motion'
 import Card from 'react-bootstrap/Card'
 
 interface AccordionProps {
@@ -31,11 +31,11 @@ const AccordionComponent: React.FC<AccordionProps> = ({
   return (
     <AnimateSharedLayout>
       <section id='sectionAccord' className='p-3'>
-        <div className='container '>
+        <div className='container'>
           {titleMain && <h2 className='text-center mb-4'>{titleMain}</h2>}
           <Accordion
             defaultActiveKey='0'
-            className='text-dark bg-light min-vw-50'
+            className='text-dark bg-light min-vw-50 min-vh-50'
           >
             <Card>
               <Card.Header as='div' className='text-center bg-light'>
