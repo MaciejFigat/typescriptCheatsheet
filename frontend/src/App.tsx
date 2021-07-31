@@ -7,6 +7,7 @@ import Hooks from './screens/Hooks'
 import Navigation from './components/Navigation'
 import Props from './screens/Props'
 import Misc from './screens/Misc'
+import VSCSnippets from './screens/VSCSnippets'
 import Footer from './components/Footer'
 function App() {
   const location = useLocation()
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/hooks' component={Hooks} />
         <Route exact path='/props' component={Props} />
         <Route exact path='/misc' component={Misc} />
+        <Route exact path='/snippets' component={VSCSnippets} />
         <Route path='/' component={Home} />
       </Switch>
       <Footer description={'Godspeed'} />

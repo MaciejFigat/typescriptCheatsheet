@@ -177,6 +177,41 @@ const Navigation: React.FC<NavProps> = () => {
                 </NavHashLink>
               </NavDropdown.Item>
             </NavDropdown>
+            {/* Navigation for VSC snippets */}
+            <NavDropdown
+              title='Snippets'
+              drop={'down'}
+              id={'dropdown-button-drop-left'}
+            >
+              <NavDropdown.Item as='button'>
+                <NavHashLink
+                  smooth
+                  to={'/snippets#partOne'}
+                  activeClassName='selected'
+                >
+                  Literals part 1
+                </NavHashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item as='button'>
+                <NavHashLink
+                  smooth
+                  to={'/snippets#partThree'}
+                  activeClassName='selected'
+                >
+                  Literals part 2
+                </NavHashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item as='button'>
+                <NavHashLink
+                  smooth
+                  to={'/snippets#partFour'}
+                  activeClassName='selected'
+                >
+                  Literals part 3
+                </NavHashLink>
+              </NavDropdown.Item>
+              {/* Navigation for VSC snippets */}
+            </NavDropdown>
           </ul>
         </div>
       </div>

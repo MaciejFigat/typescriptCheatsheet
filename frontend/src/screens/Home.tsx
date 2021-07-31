@@ -90,11 +90,11 @@ const Home: React.FC = () => {
             />
             <div>
               <h2>
-                <LinkContainer to={'/props'}>
+                <LinkContainer to={'/snippets'}>
                   <span className='text-info'>Click on the menu</span>
                 </LinkContainer>{' '}
-                to find snippets of
-                <span className='text-warning'> code</span>{' '}
+                to find snippets to use
+                <span className='text-warning'> in VSC</span>{' '}
               </h2>
             </div>
           </div>
