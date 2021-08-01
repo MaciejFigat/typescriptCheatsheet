@@ -3,7 +3,7 @@ import SectionCode from '../components/SectionCode'
 import { snippetOne, snippetTwo } from '../codeSnippets/vscSnippets'
 interface VSCSnippetsProps {}
 
-const VSCSnippets: React.FC<VSCSnippetsProps> = ({}) => {
+const VSCSnippets: React.FC<VSCSnippetsProps> = () => {
   return (
     <div>
       <SectionCode
