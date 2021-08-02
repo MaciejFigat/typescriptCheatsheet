@@ -1,6 +1,11 @@
 import React from 'react'
 import SectionCode from '../components/SectionCode'
-import { snippetOne, snippetTwo } from '../codeSnippets/vscSnippets'
+import {
+  snippetOne,
+  snippetOneOutput,
+  snippetTwo,
+  snippetTwoOutput,
+} from '../codeSnippets/vscSnippets'
 interface VSCSnippetsProps {}
 
 const VSCSnippets: React.FC<VSCSnippetsProps> = () => {
@@ -17,15 +22,23 @@ const VSCSnippets: React.FC<VSCSnippetsProps> = () => {
         sectionID='partTwo'
         title=''
         version='warning'
+        description='Output of "rt" snippet'
+        codeExample={snippetOneOutput}
+      />
+      <SectionCode
+        sectionID='partTwo'
+        title=''
+        version='warning'
         description='Typescript React Function Component'
         codeExample={snippetTwo}
       />
+
       <SectionCode
         sectionID='partThree'
         title=''
         version='primary'
-        description=''
-        codeExample='   '
+        description='Output of "rh" snippet'
+        codeExample={snippetTwoOutput}
       />
     </div>
   )

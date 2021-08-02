@@ -19,6 +19,16 @@ const snippetOne: string = `
   },
 
 `
+const snippetOneOutput = `
+import React from 'react'
+
+interface vscSnippetsProps {
+
+}
+
+export const vscSnippets: React.FC<vscSnippetsProps> = ({}) => {
+    return ();
+}`
 const snippetTwo = `"Typescript React Function Component": {
     "prefix": "rh",
     "body": [
@@ -34,7 +44,20 @@ const snippetTwo = `"Typescript React Function Component": {
     ],
     "description": "Typescript React Function Component"
   }`
-export {
-    snippetOne,
-    snippetTwo
+const snippetTwoOutput = `
+import React from 'react'
+
+interface vscSnippetsProps {
+
 }
+
+export const vscSnippets: React.FC<vscSnippetsProps> = ({}) => {
+    return ();
+}`
+export {
+  snippetOne,
+  snippetOneOutput,
+  snippetTwo,
+  snippetTwoOutput,
+}
+
